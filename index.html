@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武汉大学校园游览体验 | 探索樱花大道的魅力</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="starfield"></canvas>
+    <canvas id="cherry-blossom"></canvas>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="武汉大学logo" class="logo-img">
+                <h1>武汉大学校园游览</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#services">服务</a></li>
+                <li><a href="#attractions">景点</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#booking" class="btn btn-small">预约游览</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>探索樱花大道的魅力</h2>
+            <p>体验百年学府的文化底蕴，感受春天的浪漫气息</p>
+            <a href="#booking" class="btn btn-large">立即预约导览</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">我们的特色服务</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>学生导游讲解</h3>
+                    <p>由在校学生提供专业、生动的校园讲解，带您深入了解武大文化</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-route"></i>
+                    <h3>定制游览路线</h3>
+                    <p>根据您的兴趣和时间，量身定制专属游览路线</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-camera-retro"></i>
+                    <h3>摄影指导</h3>
+                    <p>专业摄影技巧指导，捕捉校园最美瞬间</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-history"></i>
+                    <h3>历史文化探索</h3>
+                    <p>深入了解武汉大学的悠久历史和丰富文化底蕴</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="attractions" class="attractions">
+        <div class="container">
+            <h2 class="section-title">校园亮点景观</h2>
+            <div class="attraction-slider">
+                <div class="attraction-slide">
+                    <img src="images/cherry-blossom.jpg" alt="樱花大道">
+                    <div class="attraction-info">
+                        <h3>樱花大道</h3>
+                        <p>春天盛开的樱花，营造浪漫唯美的校园氛围</p>
+                    </div>
+                </div>
+                <div class="attraction-slide">
+                    <img src="images/old-library.jpg" alt="老图书馆">
+                    <div class="attraction-info">
+                        <h3>老图书馆</h3>
+                        <p>哥特式建筑风格，见证武大百年学术历程</p>
+                    </div>
+                </div>
+                <div class="attraction-slide">
+                    <img src="images/sakura-lake.jpg" alt="珞珈山樱顶">
+                    <div class="attraction-info">
+                        <h3>珞珈山樱顶</h3>
+                        <p>校园制高点，俯瞰武汉城市美景</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/team.jpg" alt="我们的团队">
+                </div>
+                <div class="about-text">
+                    <p>我们是一群热爱武汉大学的在校学生，致力于为游客提供最优质的校园游览体验。通过我们的服务，您不仅能欣赏到武大的美景，还能深入了解学校的历史文化和学术氛围。</p>
+                    <p>我们的目标是让每一位游客都能感受到武大的魅力，留下难忘的回忆。</p>
+                    <a href="#" class="btn btn-secondary">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="section-title">预约游览</h2>
+            <form id="booking-form" action="https://formspree.io/f/xjkbpyyw" method="POST">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">预约日期</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">游览人数</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">其他要求或问题</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-large">提交预约</button>
+            </form>
+            <div id="debug-info"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 湖北省武汉市武昌区珞珈山</p>
+                    <p><i class="fas fa-phone"></i> 12345-67890</p>
+                    <p><i class="fas fa-envelope"></i> tour@whu-example.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 武汉大学校园游览服务. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
